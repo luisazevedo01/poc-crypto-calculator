@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Custom CSS Variables */
+    --header-height: 4rem;
+
+    --radius: 0.5rem;
+
+    --background: 60 12% 95%;
+    --foreground: 0 0% 4%;
+
+    /* TODO */
+    --card: 0 100% 100%;
+    --card-foreground: 210 8% 29%;
+
+    --popover: 0 0% 86%;
+    --popover-foreground: 0 0% 4%;
+
+    --primary: 210 66% 34%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 8% 29%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 60 2% 36%;
+    --muted-foreground: 60 2% 53%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 60 13% 86%;
+    --input: 60 13% 86%;
+    --input-background: 0 0% 100%;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  body {
+    @apply min-h-svh w-full bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
